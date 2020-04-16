@@ -1,0 +1,59 @@
+.background-gradient {
+  background: #283048;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+.col-Home {
+  text-align: center;
+}
+
+.banner-text {
+  background-color: black;
+  opacity: 0.8;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.banner-text h1 {
+  font-size: 4vw;
+  color: white;
+}
+
+.banner-text hr {
+  border-top:  5px dotted white;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color:white;
+  font-size: 3vw;
+  padding: 1em
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: white;
+  font-size: 5em;
+  padding: 8px;
+}
+
+/* Contact */
+.contact-header {
+  text-align: center;
+  font-family: 'Anton';
+  font-size: 5vw;
+}
