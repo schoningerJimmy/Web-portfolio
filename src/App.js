@@ -36,8 +36,8 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Container className="p-0 background-gradient" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
+        <Container className="p-0" fluid={true}>
+          <Navbar className="border-bottom background-gradient"  expand="lg">
             <Navbar.Brand style={{color: 'white'}} >Schoninger Jimmy</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
