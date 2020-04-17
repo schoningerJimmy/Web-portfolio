@@ -1,8 +1,13 @@
 import React from 'react'
+import Container from 'react-bootstrap/Container'
+import './AboutPage.css'
 
 function AboutPage(props) {
     return(
-        <p>AboutPage works!</p>
+        <Container fluid={true}>
+            <p className="About-text">fdjkfdgdfgfdghgfdfghsdrgsrthsr</p>
+
+        </Container>
     );
 
 }

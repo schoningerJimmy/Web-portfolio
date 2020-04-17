@@ -8,7 +8,7 @@ function Footer() {
     return(
         <footer className="mt-5">
             <Container fluid={true}>
-                <Row className="border-top justify-content-between p-3 background-colour-footer">
+                <Row className="justify-content-between p-3 background-colour-footer">
                     <Col className="p-0" md={3} sm={12}>
                         Schoninger Jimmy
                     </Col>
