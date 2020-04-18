@@ -1,0 +1,50 @@
+
+.col-Home {
+    text-align: center;
+  }
+  
+  .banner-text {
+    background-color: transparent;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+  
+  }
+  
+  .banner-text h1 {
+    font-size: 4vw;
+    color: white;
+  }
+  
+  .banner-text hr {
+    border-top:  5px dotted white;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .banner-text p {
+    color:white;
+    font-size: 3vw;
+    padding: 1em
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .custom-Toggle i {
+    color: white;
+    font-size: 1em;
+  }
+  
+  
+  .social-links i {
+    color: white;
+    font-size: 5em;
+    padding: 8px;
+  }

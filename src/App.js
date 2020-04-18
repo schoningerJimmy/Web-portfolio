@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Container from 'react-bootstrap/Container'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import {NavLink} from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 // own components
@@ -38,12 +39,14 @@ class App extends React.Component {
           <Container className="p-0 background-image" fluid={true}>
             <Navbar bg="transparent" expand="lg">
               <Navbar.Brand style={{color: 'white'}} >Schoninger Jimmy</Navbar.Brand>
-              <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"/>
+              <Navbar.Toggle className="border-0 custom-Toggle"  aria-controls="navbar-toggle" style={{color: 'white'}}>
+                <i className="fa fa-bars" aria-hidden="true" />
+              </Navbar.Toggle>
               <Navbar.Collapse id="navbar-toggle">
                 <Nav className="ml-auto">
-                  <Link className="nav-link" to="/"  style={{color: 'white'}} >Home</Link>
-                  <Link className="nav-link" to="/about" style={{color: 'white'}}>About</Link>
-                  <Link className="nav-link" to="/contact" style={{color: 'white'}}>Contact</Link>
+                  <NavLink className="nav-link" exact to="/"  style={{color: 'white'}}  activeStyle={{color: 'rgb(232,149,149)'}}>Home</NavLink>
+                  <NavLink className="nav-link" exact to="/about" style={{color: 'white'}} activeStyle={{color: 'rgb(232,149,149)'}}>About</NavLink>
+                  <NavLink className="nav-link" exact to="/contact" style={{color: 'white'}} activeStyle={{color: 'rgb(232,149,149)'}}>Contact</NavLink>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>

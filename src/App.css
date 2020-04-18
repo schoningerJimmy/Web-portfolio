@@ -1,5 +1,5 @@
 .background-image {
-  background-image: url(./assets/space-bg.jpg);
+  background-image: url(./assets/desert-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -12,50 +12,6 @@
 
 
 
-.col-Home {
-  text-align: center;
-}
-
-.banner-text {
-  background-color: black;
-  opacity: 0.5;
-  margin: auto;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 10px;
-
-}
-
-.banner-text h1 {
-  font-size: 4vw;
-  color: white;
-}
-
-.banner-text hr {
-  border-top:  5px dotted white;
-  width: 50%;
-  margin: auto;
-}
-
-.banner-text p {
-  color:white;
-  font-size: 3vw;
-  padding: 1em
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 50%;
-  margin: auto;
-}
-
-.social-links i {
-  color: white;
-  font-size: 5em;
-  padding: 8px;
-}
 
 /* Contact */
 .contact-header {
@@ -63,3 +19,8 @@
   font-family: 'Anton';
   font-size: 5vw;
 }
+
+.nav-link:hover {
+  color: rgb(158, 141, 138) !important; 
+}
+

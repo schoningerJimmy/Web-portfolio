@@ -1,5 +1,5 @@
 import React from 'react'
-import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
+import { Jumbotron, Container, Row, Col, Image } from 'react-bootstrap';
 import './Hero.css'
 
 
@@ -10,11 +10,7 @@ function Hero(props) {
             <Container fluid={true}>
                 <Row className="justify-content-center py-3">
                     <Col className="col-Home" md={8} sm={12}>
-                        <img 
-                            src="https://cdn.xl.thumbs.canstockphoto.fr/profil-image-avatar-homme-vecteur-eps_csp21321880.jpg"
-                            alt="avatar"
-                            className="avatar-image"
-                            />
+                        <Image src="https://cdn.xl.thumbs.canstockphoto.fr/profil-image-avatar-homme-vecteur-eps_csp21321880.jpg" rounded className="profile-home-pic"/>
                         <div className="banner-text">
                             <h1>Software Engineer</h1>
                             <hr/>
@@ -23,7 +19,6 @@ function Hero(props) {
                                 <a href="http://google.com" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-linkedin-square" aria-hidden="true" />
                                 </a>
-
                                 <a href="http://google.com" rel="noopener noreferrer" target="_blank">
                                     <i className="fa fa-github-square" aria-hidden="true" />
                                 </a>
