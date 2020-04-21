@@ -7,15 +7,46 @@ import Container from 'react-bootstrap/Container'
 import './AboutPage.css'
 
 function AboutPage(props) {
+    const educations = props.state.education.map(function(education){
+        return  (
+            <div className="education-bloc">
+                <h4> {education.school} </h4>
+                <h6> {education.degree} </h6>
+            </div>
+        )
+      });
+
+      const experiences = props.state.experience.map(function(experience){
+        return  (
+            <div className="experience-bloc">
+                <h4> {experience.company} </h4>
+                <h6> {experience.jobContent} </h6>
+            </div>
+        )
+      });
+
     return(
         <Jumbotron className="bg-transparent jumbotron-fluid p-0">
             <Container fluid={true}>
                 <Row className="justify-content-center py-3">
-                    <Col className="col-about" md={8} sm={12}>
-                        <h1>"A journey of a thousand miles begins with a single step"</h1>
-                        <p>This is a simple hero unit, a simple jumbotron-style component for calling
-                            extra attention to featured content or information.
+                    <Col className="col-about justify-content-center" md={8} sm={12}>
+                        <h1>"{props.state.info.quote}"</h1>
+                        <p>Hi, my name is {props.state.info.title}. {props.state.info.description}
                         </p>
+                        <Row>
+                            <Col className="col-education" md={6} sm={12}>
+                                <h2 >  Education 
+                                    <i className="fa fa-graduation-cap" aria-hidden="true" />
+                                </h2>
+                                {educations}
+                            </Col>
+                            <Col className="col-experience" md={6} sm={12}>
+                                <h2>Experiences
+                                    <i className="fa fa-briefcase" aria-hidden="true"/>
+                                </h2>
+                                {experiences}
+                            </Col>
+                        </Row>
                         <p>
                             <Button variant="primary">Learn more</Button>
                         </p>

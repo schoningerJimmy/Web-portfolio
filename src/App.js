@@ -15,21 +15,52 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Schoninger Jimmy',
-      headerLinks: [
-        {title: 'Home', path: '/'},
-        {title: 'About', path: '/about'},
-        {title: 'Contact', path: '/contact'}
+      info: {
+        title: 'Schoninger Jimmy',
+        quote: 'A journey of a thousand miles begins with a single step',
+        description: 'Welcome to my website. I am a french engineer, i gratuaded university in Paris with a robotics major. I am a self learner. I am hightly interested in the new technology such as AI or web development.',
+        email: 'jimmy.schoninger@gmail.com'
+      },
+      education: [
+        {
+          school: 'Pierre And Marie Curie University',
+          degree: 'Master of Science: Robotics',
+          startYear: '',
+          endYear: ''
+        },
+        {
+          school: 'Pierre And Marie Curie University',
+          degree: 'Bachelor of Science: Electronic Engineering',
+          startYear: '',
+          endYear: ''
+        }
       ],
-      home: {
-        title: 'Welcome to my port folio'
-      },
-      about: {
-        title: 'About me'
-      },
-      contact: {
-        title: 'Information'
-      }
+      experience: [
+        {
+          company: 'Enroute',
+          jobContent: 'AI engineer',
+          startYear: '',
+          endYear: ''
+        },
+        {
+          company: 'Connected Robotics',
+          jobContent: 'Robotics engineer',
+          startYear: '',
+          endYear: ''
+        },
+        {
+          company: 'Z.M.P',
+          jobContent: 'Software engineer',
+          startYear: '',
+          endYear: ''
+        },
+        {
+          company: 'ITRI',
+          jobContent: 'software engineer Intern',
+          startYear: '',
+          endYear: ''
+        }
+      ]
     }
   }
 
@@ -51,9 +82,9 @@ class App extends React.Component {
               </Navbar.Collapse>
             </Navbar>
 
-            <Route path="/" exact render={() => <HomePage title={this.state.home.title} />} />
-            <Route path="/about"  render={() => <AboutPage title={this.state.home.title} />} />
-            <Route path="/contact"  render={() => <ContactPage title={this.state.home.title} />} />
+            <Route path="/" exact render={() => <HomePage title={""} />} />
+            <Route path="/about"  render={() => <AboutPage state={this.state} />} />
+            <Route path="/contact"  render={() => <ContactPage title={""} />} />
           </Container>
         </Router>
     );

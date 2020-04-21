@@ -3,3 +3,26 @@
     text-align: center;
     
 }
+
+.col-about h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+.col-about p {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.col-education i{
+    color: white;
+    font-size: 1em;
+    padding: 8px;
+}
+
+.col-experience i{
+    color: white;
+    font-size: 1em;
+    padding: 8px;
+}
+
