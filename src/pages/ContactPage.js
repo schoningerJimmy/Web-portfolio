@@ -15,12 +15,19 @@ class ContactPage extends React.Component {
 
     nameChange(event) {
         this.setState({name: event.target.value});
-        console.log(this.state.name);
+    }
+
+    phoneChange(event) {
+        this.setState({phoneNumber: event.target.value});
+    }
+
+
+    infoChange(event) {
+        this.setState({informationDetails: event.target.value});
     }
 
     handleSubmit(event) {
-        event.preventDefault();
-        console.log("push")    
+        event.preventDefault();    
     };
 
     render() {
@@ -36,11 +43,11 @@ class ContactPage extends React.Component {
     
                                 <Form.Group controlId="formBasicPassword">
                                     <Form.Label style={{color: 'white'}}>Phone Number</Form.Label>
-                                    <Form.Control placeholder="Enter Your Phone Number" />
+                                    <Form.Control onChange={this.phoneChange.bind(this)} placeholder="Enter Your Phone Number" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Label style={{color: 'white'}}>Information Request</Form.Label>
-                                    <Form.Control as="textarea" rows="3" />
+                                    <Form.Control onChange={this.infoChange.bind(this)} as="textarea" rows="3" />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Send
