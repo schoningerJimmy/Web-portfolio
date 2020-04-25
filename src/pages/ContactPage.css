@@ -1,0 +1,12 @@
+.successSent {
+    color: rgb(12, 206, 12);
+    padding: 10px 15px;
+
+}
+
+
+.errorSent {
+    color: red;
+    padding: 10px 15px;
+
+}
