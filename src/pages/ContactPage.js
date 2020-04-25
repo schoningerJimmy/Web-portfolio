@@ -76,7 +76,7 @@ class ContactPage extends React.Component {
                             <Form onSubmit={this.handleSubmit.bind(this)}>
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label style={{color: 'white'}}>Name</Form.Label>
-                                    <Form.Control onChange={this.nameChange.bind(this)} placeholder="Enter your name" />
+                                    <Form.Control value={this.state.name} onChange={this.nameChange.bind(this)} placeholder="Enter your name" />
                                 </Form.Group>
     
                                 <Form.Group controlId="formBasicPassword">
