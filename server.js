@@ -49,7 +49,7 @@ app.post('/api/email', (req, res, next) => {
             to: process.env.EMAIL_ID, // list of receivers
             subject: "contact from portfolio", // Subject line
             text: req.body.informationDetails, // plain text body
-            html: "<b>Welcome</b>" // html body
+            replyTo: req.body.name
         }, (err, info) => {
             if (err) {
                 console.log(err);
