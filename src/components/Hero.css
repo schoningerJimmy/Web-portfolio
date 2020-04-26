@@ -4,11 +4,16 @@
   }
   
   .profile-home-pic {
-    width: 4em;
-    height: 4em;
+    background-image: url("../assets/profile2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15em;
+    width: 15em;
+    border: 0;
+
   }
 
-  
+
   .banner-text {
     background-color: transparent;
     margin: auto;
@@ -21,6 +26,7 @@
   .banner-text h1 {
     font-size: 3em;
     color: white;
+    font-family: 'Spartan', sans-serif;
   }
   
   .banner-text hr {
@@ -32,7 +38,8 @@
   .banner-text p {
     color:white;
     font-size: 1em;
-    padding: 1em
+    padding: 1em;
+    font-family: 'Spartan', sans-serif;
   }
   
   .social-links {

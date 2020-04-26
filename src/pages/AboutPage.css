@@ -8,21 +8,29 @@
     font-family: 'Playfair Display', serif;
 }
 
-.col-about p {
-    font-family: 'Lato', sans-serif;
+.col-about p, .col-education, .col-experience {
+    font-family: 'Spartan', sans-serif;
 }
 
 
-
-.col-education i{
+.col-education i, .col-experience i{
     color: white;
     font-size: 1em;
     padding: 8px;
 }
 
-.col-experience i{
-    color: white;
-    font-size: 1em;
-    padding: 8px;
+.col-education hr,  .col-experience hr{
+    border-top:  5px dotted white;
+    width: 50%;
+    margin: auto;
 }
 
+
+
+.education-bloc h6, .experience-bloc h6 {
+    font-style: italic;
+}
+
+.education-bloc h4, .experience-bloc h4 {
+    margin-top: 20px;
+}

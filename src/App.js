@@ -18,7 +18,7 @@ class App extends React.Component {
       info: {
         title: 'Schoninger Jimmy',
         quote: 'A journey of a thousand miles begins with a single step',
-        description: 'Welcome to my website. I am a french engineer, I gratuaded university in Paris with a robotics major. I am a self learner. I am hightly interested in the new technology such as AI or web development. When i am not learning new things, i am practicing Karate or relaxing with a good SF movie.',
+        description: 'Welcome to my website. I am a french engineer, I gratuaded university in Paris with a robotics major. I am a self-taught. I am hightly interested in the new technology such as AI or web development. When i am not learning new things, i am practicing Karate or relaxing with a good SF movie.',
         email: 'jimmy.schoninger@gmail.com'
       },
       education: [

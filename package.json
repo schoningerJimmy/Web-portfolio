@@ -23,9 +23,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "react-scripts start",
     "start": "node server.js",
-    "build": "react-scripts build",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm install && react-scripts build"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {

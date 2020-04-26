@@ -1,6 +1,5 @@
 import React from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
@@ -38,18 +37,17 @@ function AboutPage(props) {
                                 <h2 >  Education 
                                     <i className="fa fa-graduation-cap" aria-hidden="true" />
                                 </h2>
+                                <hr/>
                                 {educations}
                             </Col>
                             <Col className="col-experience" md={6} sm={12}>
                                 <h2>Experiences
                                     <i className="fa fa-briefcase" aria-hidden="true"/>
                                 </h2>
+                                <hr/>
                                 {experiences}
                             </Col>
                         </Row>
-                        <p>
-                            <Button variant="primary">Learn more</Button>
-                        </p>
                     </Col>
                 </Row>
             </Container>
