@@ -3,6 +3,12 @@
     text-align: center;
   }
   
+  .profile-home-pic {
+    width: 4em;
+    height: 4em;
+  }
+
+  
   .banner-text {
     background-color: transparent;
     margin: auto;

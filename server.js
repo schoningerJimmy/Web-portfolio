@@ -47,12 +47,15 @@ app.post('/api/email', (req, res, next) => {
         transporter.sendMail({
             from: process.env.EMAIL_ID, // sender address
             to: process.env.EMAIL_ID, // list of receivers
-            subject: "contact from portfolio", // Subject line
+            subject: "contact from " + req.body.name, // Subject line
             text: req.body.informationDetails, // plain text body
-            replyTo: req.body.name
+            replyTo: req.body.email
         }, (err, info) => {
             if (err) {
                 console.log(err);
+                res.status(401).json({
+                    success: false
+                });
             }
             console.log('Message sent: ' + info.messageId);
             res.status(200).json({

@@ -7,8 +7,8 @@ class ContactPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            email: "",
             name: "",
-            phoneNumber: "",
             informationDetails: "",
             disabled: false,
             isSent: false
@@ -16,12 +16,12 @@ class ContactPage extends React.Component {
     }
     
 
-    nameChange(event) {
-        this.setState({name: event.target.value});
+    mailChange(event) {
+        this.setState({email: event.target.value});
     }
 
-    phoneChange(event) {
-        this.setState({phoneNumber: event.target.value});
+    nameChange(event) {
+        this.setState({name: event.target.value});
     }
 
 
@@ -40,10 +40,9 @@ class ContactPage extends React.Component {
             const form = await Axios.post('/api/email', this.state);
 
             if (form.data.success) {
-                console.log('inside');
                 this.setState({
+                    email: "",
                     name: "",
-                    phoneNumber: "",
                     informationDetails: "",
                     disabled: false,
                     isSent: true
@@ -55,7 +54,6 @@ class ContactPage extends React.Component {
                 });
             };
         } catch(err) {
-            console.log(err);
             this.setState({
                 disabled: false,
                 isSent: false
@@ -75,17 +73,17 @@ class ContactPage extends React.Component {
                         <Col xs={12} sm={8}>
                             <Form onSubmit={this.handleSubmit.bind(this)}>
                                 <Form.Group controlId="formBasicEmail">
-                                    <Form.Label style={{color: 'white'}}>Name</Form.Label>
-                                    <Form.Control value={this.state.name} onChange={this.nameChange.bind(this)} placeholder="Enter your name" />
+                                    <Form.Label style={{color: 'white'}}>Email</Form.Label>
+                                    <Form.Control value={this.state.email} onChange={this.mailChange.bind(this)} placeholder="Enter your email adress" />
                                 </Form.Group>
     
                                 <Form.Group controlId="formBasicPassword">
-                                    <Form.Label style={{color: 'white'}}>Phone Number</Form.Label>
-                                    <Form.Control onChange={this.phoneChange.bind(this)} placeholder="Enter Your Phone Number" />
+                                    <Form.Label style={{color: 'white'}}>Name</Form.Label>
+                                    <Form.Control value={this.state.name} onChange={this.nameChange.bind(this)} placeholder="Enter Your name" />
                                 </Form.Group>
                                 <Form.Group controlId="exampleForm.ControlTextarea1">
                                     <Form.Label style={{color: 'white'}}>Information Request</Form.Label>
-                                    <Form.Control onChange={this.infoChange.bind(this)} as="textarea" rows="3" />
+                                    <Form.Control value={this.state.informationDetails} onChange={this.infoChange.bind(this)} as="textarea" rows="3" />
                                 </Form.Group>
                                 <Button className="d-inline-block" variant="primary" disabled={this.state.disabled} type="submit">
                                     Send
