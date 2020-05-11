@@ -10,6 +10,7 @@ import './App.css';
 import HomePage from './pages/HomePage'
 import ContactPage from './pages/ContactPage'
 import AboutPage from './pages/AboutPage'
+import Projects from './pages/Projects'
 
 class App extends React.Component {
   constructor(props) {
@@ -77,6 +78,7 @@ class App extends React.Component {
                 <Nav className="ml-auto">
                   <NavLink className="nav-link" exact to="/"  style={{color: 'white'}}  activeStyle={{color: 'rgb(232,149,149)'}}>Home</NavLink>
                   <NavLink className="nav-link" exact to="/about" style={{color: 'white'}} activeStyle={{color: 'rgb(232,149,149)'}}>About</NavLink>
+                  <NavLink className="nav-link" exact to="/project" style={{color: 'white'}} activeStyle={{color: 'rgb(232,149,149)'}}>Projects</NavLink>
                   <NavLink className="nav-link" exact to="/contact" style={{color: 'white'}} activeStyle={{color: 'rgb(232,149,149)'}}>Contact</NavLink>
                 </Nav>
               </Navbar.Collapse>
@@ -84,6 +86,7 @@ class App extends React.Component {
 
             <Route path="/" exact render={() => <HomePage title={""} />} />
             <Route path="/about"  render={() => <AboutPage state={this.state} />} />
+            <Route path="/project"  render={() => <Projects />} />
             <Route path="/contact"  render={() => <ContactPage title={""} />} />
           </Container>
         </Router>
